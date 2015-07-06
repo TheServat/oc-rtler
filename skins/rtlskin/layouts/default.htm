@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="<?= Config::get('app.locale', 'en') ?>" class="no-js <?= $this->makeLayoutPartial('browser_detector') ?>">
+    <head>
+        <?= $this->makeLayoutPartial('head') ?>
+        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/redactor.custom.js') ?>"></script>
+        <?php if(File::exists(base_path().'/plugins/rtlweb/rtlskin/assets/js/redactor/languages/'.app()->getLocale().'.js')): ?>
+        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/redactor/languages/'.app()->getLocale().'.js') ?>"></script>
+        <?php endif ?>
+        <?php if(trans('system::lang.direction') == 'rtl'): ?>
+        <link href="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/css/custom.css') ?>?v<?= System\Models\Parameters::get('system::core.build', 1) ?>" rel="stylesheet">
+        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/october.sidepaneltab.custom.js') ?>"></script>
+        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/october.verticalmenu.custom.js') ?>"></script>
+        <?php endif ?>
+    </head>
+    <body class="<?= $this->bodyClass ?>">
+        <div id="layout-canvas">
+            <div class="layout">
+
+                <!-- Main Menu -->
+                <div class="layout-row min-size">
+                    <?= $this->makeLayoutPartial('mainmenu') ?>
+                </div>
+
+                <div class="layout-row">
+                    <div class="layout">
+
+                        <!-- Side Navigation -->
+                        <?= $this->makeLayoutPartial('sidenav') ?>
+
+                        <!-- Side panel -->
+                        <?php if ($sidePanelContent = Block::placeholder('sidepanel')): ?>
+                            <div class="layout-cell width-300 hide-on-small" id="layout-side-panel" data-control="layout-sidepanel">
+                                <?= $sidePanelContent ?>
+                            </div>
+                        <?php endif ?>
+
+                        <!-- Content Body -->
+                        <div class="layout-cell layout-container" id="layout-body">
+                            <div class="layout-relative">
+
+                                <div class="layout">
+                                    <?php if ($breadcrumbContent = Block::placeholder('breadcrumb')): ?>
+                                        <!-- Breadcrumb -->
+                                        <div class="control-breadcrumb">
+                                            <?= $breadcrumbContent ?>
+                                        </div>
+                                    <?php endif ?>
+
+                                    <!-- Content -->
+                                    <div class="layout-row">
+                                        <?= Block::placeholder('body') ?>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Flash Messages -->
+        <div id="layout-flash-messages"><?= $this->makeLayoutPartial('flash_messages') ?></div>
+
+    </body>
+</html>

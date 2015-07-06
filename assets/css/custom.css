@@ -1,0 +1,51 @@
+html,body{
+    direction: ltr;
+}
+.fancy-layout .control-tabs.master > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master > div > div.tabs-container > ul.nav-tabs > li a > span.title::after{
+    background-position: 0 -80px;
+}
+.fancy-layout .control-tabs.master > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after, .fancy-layout.control-tabs.master > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after{
+    background-position: 0px -40px;
+}
+.fancy-layout .control-tabs.primary > div > ul.nav-tabs > li a span.title::after, .fancy-layout.control-tabs.primary > div > ul.nav-tabs > li a span.title::after{
+    background-position: 0 -92px;
+}
+.fancy-layout .control-tabs.primary > div > ul.nav-tabs > li.active a span.title::after, .fancy-layout.control-tabs.primary > div > ul.nav-tabs > li.active a span.title::after{
+    background-position: 0 -62px;
+}
+.control-tabs.primary > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li.active a > span.title::after{
+    background-position: 0px 0px;
+}
+.control-tabs.primary > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li a > span.title::after{
+    background-position: 0px -31px;
+}
+.control-treeview ol > li > div > ul.submenu::after{
+    background-position: 0px top;
+}
+.fancy-layout .control-tabs.secondary.content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary.content-tabs > div > ul.nav-tabs > li a > span.title::after{
+    background-position: 0px 0px;
+}
+.sidenav-tree ul.top-level > li > div.group h3::before{
+    right:13px;
+    left: auto;
+    content: '\f0d9';
+}
+.control-filelist ul li.group > h4 a::before, .control-filelist ul li.group > div.group > h4 a::before{
+    right: 20px;
+    left: auto;
+    content: '\f0d9';
+}
+.control-tabs::before{
+    content: "";
+}
+control-tabs::after {
+    content:"" ;
+}
+.redactor-toolbar-tooltip{
+    left:auto !important;
+    right: 0;
+}
+.redactor-dropdown{
+    left:auto !important;
+    right:0;
+}
