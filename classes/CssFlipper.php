@@ -6,7 +6,7 @@
  * Time: 3:04 PM
  */
 
-namespace RtlWeb\RtlSkin\Classes;
+namespace RtlWeb\Rtler\Classes;
 
 
 use File;
@@ -34,14 +34,20 @@ class CssFlipper
             $flipped_css = CSSJanus::transform(File::get($orginalFile), true, true);
 
             //change url
-            if($useTheme===false) {
+            if ($useTheme === false) {
                 $flipped_css = preg_replace_callback('/url\s*\(\s*[\'|\"]?([A-Za-z0-9\.\/\-\?=#_&]+)[\'|\"]?\)/i', function ($url) use ($path) {
                     $u = str_replace('\'', '', $url[1]);
                     $u = str_replace('"', '', $u);
-                    return 'url(\'' . dirname($path) . '/' . $u . '\')';
+//                    dd('url(\'/' . dirname($path) . '/' . $u . '\')');
+                    $p = dirname($path) . '/' . $u;
+                    if (substr($p, 0, 1) != '/') {
+                        $p = '/' . $p;
+                    }
+
+                    return 'url(\'' . $p . '\')';
                 }, $flipped_css);
             }
-            preg_replace_callback('/@import\s*"([A-Z0-9\.\/.]+)"\s*;/i', function ($import) use ($path, $useTheme) {
+            preg_replace_callback('/@import\s*"([A-Za-z0-9\.\/\-\?=#_&]+)"\s*;/i', function ($import) use ($path, $useTheme) {
                 $importPath = $import[1];
                 if (substr($importPath, 0, 1) != '/') {
                     $importPath = dirname($path) . '/' . $importPath;
@@ -64,6 +70,6 @@ class CssFlipper
      */
     public static function getCustomPath($path)
     {
-        return base_path('plugins/rtlweb/rtlskin/skins/rtlskin/generated/') . $path;
+        return base_path('plugins/rtlweb/rtler/skins/rtlskin/generated/') . $path;
     }
 }

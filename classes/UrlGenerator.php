@@ -1,5 +1,5 @@
 <?php
-namespace RtlWeb\RtlSkin\Classes;
+namespace RtlWeb\Rtler\Classes;
 
 use File;
 use Config;
@@ -17,15 +17,19 @@ class UrlGenerator extends baseGenerator
      */
     public function asset($path, $secure = null)
     {
-        if(trans('system::lang.direction') != 'rtl'){
-            return parent::asset($path,$secure);
+        if (trans('system::lang.direction') != 'rtl') {
+            return parent::asset($path, $secure);
         }
         if ($this->isValidUrl($path)) return $path;
 
         $backendUri = Config::get('cms.backendUri');
         $requestUrl = Request::url();
-
-        if (File::extension($path) == 'css' && preg_match('/\/' . $backendUri . '/', $requestUrl)) {
+        if (File::exists(
+            base_path(dirname($path)) . '.rtl.' . File::extension($path)
+        )) {
+            $path = dirname($path) . '.rtl.' . File::extension($path);
+        }
+        else if (File::extension($path) == 'css' && strpos($requestUrl, $backendUri)) {
             $path = CssFlipper::flipCss($path);
         }
 

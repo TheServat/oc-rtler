@@ -2,14 +2,14 @@
 <html lang="<?= Config::get('app.locale', 'en') ?>" class="no-js <?= $this->makeLayoutPartial('browser_detector') ?>">
     <head>
         <?= $this->makeLayoutPartial('head') ?>
-        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/redactor.custom.js') ?>"></script>
-        <?php if(File::exists(base_path().'/plugins/rtlweb/rtlskin/assets/js/redactor/languages/'.app()->getLocale().'.js')): ?>
-        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/redactor/languages/'.app()->getLocale().'.js') ?>"></script>
+        <script src="<?= URL::asset('/plugins/rtlweb/rtler/assets/js/redactor.custom.js') ?>"></script>
+        <?php if(File::exists(base_path().'/plugins/rtlweb/rtler/assets/js/redactor/languages/'.app()->getLocale().'.js')): ?>
+        <script src="<?= URL::asset('/plugins/rtlweb/rtler/assets/js/redactor/languages/'.app()->getLocale().'.js') ?>"></script>
         <?php endif ?>
         <?php if(trans('system::lang.direction') == 'rtl'): ?>
-        <link href="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/css/custom.css') ?>?v<?= System\Models\Parameters::get('system::core.build', 1) ?>" rel="stylesheet">
-        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/october.sidepaneltab.custom.js') ?>"></script>
-        <script src="<?= URL::asset('/plugins/rtlweb/rtlskin/assets/js/october.verticalmenu.custom.js') ?>"></script>
+        <link href="<?= URL::asset('/plugins/rtlweb/rtler/assets/css/custom.css') ?>?v<?= System\Models\Parameters::get('system::core.build', 1) ?>" rel="stylesheet">
+        <script src="<?= URL::asset('/plugins/rtlweb/rtler/assets/js/october.sidepaneltab.custom.js') ?>"></script>
+        <script src="<?= URL::asset('/plugins/rtlweb/rtler/assets/js/october.verticalmenu.custom.js') ?>"></script>
         <?php endif ?>
     </head>
     <body class="<?= $this->bodyClass ?>">

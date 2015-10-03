@@ -1,19 +1,14 @@
 {
-  "name": "rtlweb/rtlskin",
-  "description": "Rtl Support plugin for OctoberCMS",
-  "keywords": [
-    "october",
-    "cms",
-    "rtlweb",
-    "rtl"
-  ],
-  "authors": [
-    {
-      "name": "Sajjad",
-      "email": "sajjad.servatjoo@gmail.com"
-    }
-  ],
-  "require": {
-    "cssjanus/cssjanus": "^1.1"
-  }
+    "name": "rtlweb/rtler",
+    "description": "OctoberCms Rtler Plugin",
+    "require": {
+        "cssjanus/cssjanus": "^1.1"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sajjad",
+            "email": "sajjad.servatjoo@gmail.com"
+        }
+    ]
 }

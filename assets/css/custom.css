@@ -1,14 +1,47 @@
 html,body{
     direction: ltr;
 }
+.clockpicker-popover .popover-title{
+    direction: rtl;
+}
+.select2-container--default{
+    direction: ltr;
+}
+.select2-container--open .select2-dropdown {
+    right: 0;
+    left: auto;
+    direction: ltr;
+}
+.control-tabs.primary > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary-tabs > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li.active a > span.title::after {
+    background-position: 0 0;
+}
+.fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after{
+    background-position:0 -40px;
+}
 .fancy-layout .control-tabs.master > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master > div > div.tabs-container > ul.nav-tabs > li a > span.title::after{
+    background-position: 0 -80px;
+}
+.fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after{
     background-position: 0 -80px;
 }
 .fancy-layout .control-tabs.master > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after, .fancy-layout.control-tabs.master > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after{
     background-position: 0px -40px;
 }
+
+.field-codeeditor .editor-toolbar{
+    left: 17px;
+    right: auto !important;
+}
+body.display-side-panel #layout-side-panel{
+    z-index: 99999;
+}
+.fancy-layout .control-tabs.primary-tabs > div > ul.nav-tabs > li a span.title::after, .fancy-layout.control-tabs.primary-tabs > div > ul.nav-tabs > li a span.title::after,
 .fancy-layout .control-tabs.primary > div > ul.nav-tabs > li a span.title::after, .fancy-layout.control-tabs.primary > div > ul.nav-tabs > li a span.title::after{
     background-position: 0 -92px;
+}
+
+.fancy-layout .control-tabs.primary-tabs > div > ul.nav-tabs > li.active a span.title::after, .fancy-layout.control-tabs.primary-tabs > div > ul.nav-tabs > li.active a span.title::after{
+    background-position: 0 -62px;
 }
 .fancy-layout .control-tabs.primary > div > ul.nav-tabs > li.active a span.title::after, .fancy-layout.control-tabs.primary > div > ul.nav-tabs > li.active a span.title::after{
     background-position: 0 -62px;
@@ -48,4 +81,36 @@ control-tabs::after {
 .redactor-dropdown{
     left:auto !important;
     right:0;
+}
+.fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::before, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::before, .fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after {
+    top: 1px;
+}
+
+.control-breadcrumb li::after {
+    content: "";
+}
+
+.component-list .components div.layout div.layout-row div.layout-cell > div::before {
+    text-indent: 4px;
+}
+
+.draggable-component-item > div::after, .component-list .components div.layout-cell > div::after, div.control-componentlist div.components div.layout-cell > div::after {
+    text-indent: 3px;
+    transform: rotate(180deg);
+}
+.control-assetlist ul li .checkbox {
+    right: 17px;
+}
+div.control-popover.placement-bottom .popover-head::before {
+    right: 15px;
+    left: auto;
+}
+input[dir=auto]{
+    direction: ltr;
+}
+.redactor-editor{
+    direction: ltr !important;
+}
+.control-tabs.primary > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after{
+    background-position: 0 -31px;
 }

@@ -1,8 +1,7 @@
 <?php
-namespace RtlWeb\RtlSkin\Skins;
+namespace RtlWeb\Rtler\Skins;
 
 use Backend\Classes\Skin;
-use File;
 
 /**
  * RTL skin information file
