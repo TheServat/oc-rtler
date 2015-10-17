@@ -5,6 +5,7 @@ use File;
 use Config;
 use Request;
 use Illuminate\Routing\UrlGenerator as baseGenerator;
+use RtlWeb\Rtler\Models\Settings;
 
 class UrlGenerator extends baseGenerator
 {
@@ -17,7 +18,15 @@ class UrlGenerator extends baseGenerator
      */
     public function asset($path, $secure = null)
     {
-        if (trans('system::lang.direction') != 'rtl') {
+        $languages = Settings::get('languages', ['fa']);
+        if (!is_array($languages)) {
+            if($languages == 0){
+                $languages = 'fa';
+            }
+            $languages = [$languages];
+        }
+
+        if (array_search(\Lang::getLocale(),$languages) === false) {
             return parent::asset($path, $secure);
         }
         if ($this->isValidUrl($path)) return $path;
@@ -26,10 +35,10 @@ class UrlGenerator extends baseGenerator
         $requestUrl = Request::url();
         if (File::exists(
             base_path(dirname($path)) . '.rtl.' . File::extension($path)
-        )) {
+        )
+        ) {
             $path = dirname($path) . '.rtl.' . File::extension($path);
-        }
-        else if (File::extension($path) == 'css' && strpos($requestUrl, $backendUri)) {
+        } else if (File::extension($path) == 'css' && (strpos($requestUrl, $backendUri) || strpos($path, 'plugins/') || strpos($path, 'modules/'))) {
             $path = CssFlipper::flipCss($path);
         }
 

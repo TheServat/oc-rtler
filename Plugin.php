@@ -1,15 +1,17 @@
 <?php namespace RtlWeb\Rtler;
 
-use Cms\Classes\Theme;
+use Backend;
 use Config;
 use File;
 use Request;
+use Cms\Classes\Theme;
 use System\Classes\PluginBase;
 use System\Classes\MarkupManager;
 use System\Classes\PluginManager;
 use RtlWeb\Rtler\Classes\CssFlipper;
 use RtlWeb\Rtler\Classes\UrlGenerator;
 use October\Rain\Router\Helper as RouterHelper;
+use System\Classes\SettingsManager;
 
 
 /**
@@ -43,9 +45,9 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'Rtler',
-            'description' => 'make back end rtl if language required rtl layout',
-            'author'      => 'RtlWeb',
+            'name'        => 'rtlweb.rtler::lang.plugin.name',
+            'description' => 'rtlweb.rtler::lang.plugin.description',
+            'author'      => 'Sajjad Servatjoo',
             'icon'        => 'icon-leaf'
         ];
     }
@@ -100,7 +102,26 @@ class Plugin extends PluginBase
         });
     }
 
+    /**
+     * Registers any back-end configuration for Rtler.
+     *
+     * @return array
+     */
+    public function registerSettings()
+    {
+        return [
+            'rtler' => [
+                'label' => 'rtlweb.rtler::lang.plugin.name',
+                'description' => 'rtlweb.rtler::lang.plugin.description',
+                'category' => 'rtlweb.rtler::lang.plugin.name',
+                'icon' => 'icon-magic',
+                'class'       => 'RtlWeb\Rtler\Models\Settings',
+                'order' => 500,
+                'keywords' => 'rtl rtler'
+            ]
+        ];
 
+    }
     /**
      * Twig Markup tag 'flipCss'
      * @param $paths
