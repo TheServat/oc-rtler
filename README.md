@@ -2,7 +2,7 @@ Right-to-Left Support For OctoberCms
 =============
 This plugin adds Right-To-Left support to OctoberCMS
 ## How to use this plugin
-if you want to change backend language to right to left add ```'direction' => 'rtl'``` to lang.php in ```system``` module, this will change the layout automatically in that language. 
+if you want to change language layout to right to left go to system->Rtler menu in backend and select language. 
 
 use ```flipCss``` filter in theme to flipping css in the frontend, for example:
 ```html
