@@ -129,11 +129,12 @@ div.control-popover.placement-bottom .popover-head::before {
     right: 15px;
     left: auto;
 }
+
 div.control-popover {
     left: auto !important;
 }
 
-div.control-popover.placement-right .popover-head::before{
+div.control-popover.placement-right .popover-head::before {
     right: -8px !important;
     left: auto;
     border-left: 8px solid #d35400;
@@ -157,4 +158,39 @@ input[dir=auto] {
 
 .control-tabs.primary > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after {
     background-position: 0 -31px;
+}
+
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after {
+    background-position: 0 0;
+}
+
+.builder-tabs.primary > .tabs > ul.tabs > li.active > div.tab-container::before {
+    background-position: left 0;
+}
+
+.builder-tabs.primary > .tabs > ul.tabs > li.active > div.tab-container::after {
+    background-position: 0 0;
+}
+
+.oc-icon-chevron-right:before, .icon-chevron-right:before {
+    content: "\f053"
+}
+
+.oc-icon-chevron-left:before, .icon-chevron-left:before {
+    content: "\f054"
+}
+
+.builder-tabs.primary > .tabs > ul.tabs > li.new-tab {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+.builder-tabs.primary > .tabs > ul.tabs > li > div.tab-container::before{
+    background-position: right -27px;
+}
+.builder-tabs.primary > .tabs > ul.tabs > li > div.tab-container::after{
+    background-position: 0 -27px;
 }
