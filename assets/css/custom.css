@@ -194,3 +194,6 @@ input[dir=auto] {
 .builder-tabs.primary > .tabs > ul.tabs > li > div.tab-container::after{
     background-position: 0 -27px;
 }
+.ace-github,#BlogMarkdown-formContent-content-code,.ace-github textarea,#BlogMarkdown-formContent-content-code textarea{
+    direction: rtl;
+}
