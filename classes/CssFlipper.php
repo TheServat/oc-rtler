@@ -21,9 +21,13 @@ class CssFlipper
      */
     public static function flipCss($path, $useTheme = false)
     {
+        if($path == '/modules/backend/formwidgets/richeditor/assets/css/richeditor.css'){
+            return $path;
+        }
         $theme_name = Theme::getActiveTheme()->getDirName();
         $customPath = $useTheme ? themes_path($theme_name . '/' . dirname($path) . '/' . File::name($path) . '.rtl.' . File::extension($path)) : static::getCustomPath($path);
         $orginalFile = $useTheme ? themes_path($theme_name . '/' . $path) : base_path($path);
+
         $replacePath = $useTheme ? themes_path($theme_name) : base_path();
 
         if (File::exists($orginalFile)) {

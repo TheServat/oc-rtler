@@ -54,6 +54,7 @@ class Plugin extends PluginBase
     public function register()
     {
         Config::set('cms.backendSkin', 'RtlWeb\Rtler\Skins\RtlSkin');
+
         $this->registerMarkupTags();
         $this->registerUrlGenerator();
     }

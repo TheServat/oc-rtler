@@ -1,7 +1,9 @@
 html, body {
     direction: ltr;
 }
-
+.clockpicker-popover{
+    left: auto !important;
+}
 .clockpicker-popover .popover-title {
     direction: rtl;
 }
@@ -90,41 +92,37 @@ body.display-side-panel #layout-side-panel {
     content: "";
 }
 
-control-tabs::after {
-    content: "";
+.control-tabs::after {
+    content: "" !important;
 }
 
-.redactor-toolbar-tooltip {
-    left: auto !important;
-    right: 0;
-}
-
-.redactor-dropdown {
-    left: auto !important;
-    right: 0;
-}
 
 .fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::before, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::before, .fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after {
-    top: 1px;
+    transform: skewX(20deg);
 }
 
 .control-breadcrumb li::after {
     content: "";
 }
-
 .component-list .components div.layout div.layout-row div.layout-cell > div::before {
-    text-indent: 4px;
+    text-indent: 4px !important;
 }
 
 .draggable-component-item > div::after, .component-list .components div.layout-cell > div::after, div.control-componentlist div.components div.layout-cell > div::after {
-    text-indent: 3px;
-    transform: rotate(180deg);
+    text-indent: 3px !important;
+    transform: rotate(180deg) !important;
 }
-
+.control-assetlist ul li div.controls{
+    right: 45px;
+    left: auto;
+}
 .control-assetlist ul li .checkbox {
     right: 17px;
+    left: auto;
 }
-
+.control-assetlist p.parent a.link, .control-assetlist ul li a.link{
+    padding: 10px 50px 10px 20px;
+}
 div.control-popover.placement-bottom .popover-head::before {
     right: 15px;
     left: auto;
@@ -152,9 +150,6 @@ input[dir=auto] {
     direction: ltr;
 }
 
-.redactor-editor {
-    direction: ltr !important;
-}
 
 .control-tabs.primary > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after {
     background-position: 0 -31px;
@@ -195,5 +190,20 @@ input[dir=auto] {
     background-position: 0 -27px;
 }
 .ace-github,#BlogMarkdown-formContent-content-code,.ace-github textarea,#BlogMarkdown-formContent-content-code textarea{
+    direction: rtl;
+}
+.control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::before, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::before, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::before{
+    transform: skewX(20deg);
+}
+.control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after{
+    transform: skewX(-20deg);
+}
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::before, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::before{
+    transform: skewX(20deg);
+}
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after{
+    transform: skewX(-20deg);
+}
+.beautifier-container , .beautifier-raw-content{
     direction: rtl;
 }
