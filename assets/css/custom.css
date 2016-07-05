@@ -1,90 +1,43 @@
 html, body {
-    direction: ltr;
-}
-.clockpicker-popover{
-    left: auto !important;
-}
-.clockpicker-popover .popover-title {
     direction: rtl;
 }
 
-.select2-container--default {
+.clockpicker-popover {
+    right: auto !important;
+}
+
+.clockpicker-popover .popover-title {
     direction: ltr;
+}
+
+.select2-container--default {
+    direction: rtl;
 }
 
 .select2-container--open .select2-dropdown {
-    right: 0;
-    left: auto;
-    direction: ltr;
-}
-
-.control-tabs.primary > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary-tabs > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li.active a > span.title::after {
-    background-position: 0 0;
-}
-
-.fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after {
-    background-position: 0 -40px;
-}
-
-.fancy-layout .control-tabs.master > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master > div > div.tabs-container > ul.nav-tabs > li a > span.title::after {
-    background-position: 0 -80px;
-}
-
-.fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after {
-    background-position: 0 -80px;
-}
-
-.fancy-layout .control-tabs.master > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after, .fancy-layout.control-tabs.master > div > div.tabs-container > ul.nav-tabs > li.active a > span.title::after {
-    background-position: 0px -40px;
+    left: 0;
+    right: auto;
+    direction: rtl;
 }
 
 .field-codeeditor .editor-toolbar {
-    left: 17px;
-    right: auto !important;
+    right: 17px;
+    left: auto !important;
 }
 
 body.display-side-panel #layout-side-panel {
     z-index: 99999;
 }
 
-.fancy-layout .control-tabs.primary-tabs > div > ul.nav-tabs > li a span.title::after, .fancy-layout.control-tabs.primary-tabs > div > ul.nav-tabs > li a span.title::after,
-.fancy-layout .control-tabs.primary > div > ul.nav-tabs > li a span.title::after, .fancy-layout.control-tabs.primary > div > ul.nav-tabs > li a span.title::after {
-    background-position: 0 -92px;
-}
-
-.fancy-layout .control-tabs.primary-tabs > div > ul.nav-tabs > li.active a span.title::after, .fancy-layout.control-tabs.primary-tabs > div > ul.nav-tabs > li.active a span.title::after {
-    background-position: 0 -62px;
-}
-
-.fancy-layout .control-tabs.primary > div > ul.nav-tabs > li.active a span.title::after, .fancy-layout.control-tabs.primary > div > ul.nav-tabs > li.active a span.title::after {
-    background-position: 0 -62px;
-}
-
-.control-tabs.primary > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li.active a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li.active a > span.title::after {
-    background-position: 0px 0px;
-}
-
-.control-tabs.primary > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li a > span.title::after {
-    background-position: 0px -31px;
-}
-
-.control-treeview ol > li > div > ul.submenu::after {
-    background-position: 0px top;
-}
-
-.fancy-layout .control-tabs.secondary.content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary.content-tabs > div > ul.nav-tabs > li a > span.title::after {
-    background-position: 0px 0px;
-}
-
 .sidenav-tree ul.top-level > li > div.group h3::before {
-    right: 13px;
-    left: auto;
+    left: 13px;
+    right: auto;
     content: '\f0d9';
 }
 
 .control-filelist ul li.group > h4 a::before, .control-filelist ul li.group > div.group > h4 a::before {
-    right: 20px;
-    left: auto;
+    left: 20px;
+    right: auto;
     content: '\f0d9';
 }
 
@@ -96,14 +49,10 @@ body.display-side-panel #layout-side-panel {
     content: "" !important;
 }
 
-
 .fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::before, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::before, .fancy-layout .control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.master-tabs > div > div.tabs-container > ul.nav-tabs > li a > span.title::after {
     transform: skewX(20deg);
 }
 
-.control-breadcrumb li::after {
-    content: "";
-}
 .component-list .components div.layout div.layout-row div.layout-cell > div::before {
     text-indent: 4px !important;
 }
@@ -112,59 +61,46 @@ body.display-side-panel #layout-side-panel {
     text-indent: 3px !important;
     transform: rotate(180deg) !important;
 }
-.control-assetlist ul li div.controls{
-    right: 45px;
-    left: auto;
+
+.control-assetlist ul li div.controls {
+    left: 45px;
+    right: auto;
 }
+
 .control-assetlist ul li .checkbox {
-    right: 17px;
-    left: auto;
+    left: 17px;
+    right: auto;
 }
-.control-assetlist p.parent a.link, .control-assetlist ul li a.link{
-    padding: 10px 50px 10px 20px;
+
+.control-assetlist p.parent a.link, .control-assetlist ul li a.link {
+    padding: 10px 20px 10px 50px;
 }
+
 div.control-popover.placement-bottom .popover-head::before {
-    right: 15px;
-    left: auto;
+    left: 15px;
+    right: auto;
 }
 
 div.control-popover {
-    left: auto !important;
+    right: auto !important;
 }
 
 div.control-popover.placement-right .popover-head::before {
-    right: -8px !important;
-    left: auto;
-    border-left: 8px solid #d35400;
-    border-right: none;
-}
-
-div.control-popover.placement-left .popover-head::before {
     left: -8px !important;
     right: auto;
     border-right: 8px solid #d35400;
     border-left: none;
 }
 
+div.control-popover.placement-left .popover-head::before {
+    right: -8px !important;
+    left: auto;
+    border-left: 8px solid #d35400;
+    border-right: none;
+}
+
 input[dir=auto] {
-    direction: ltr;
-}
-
-
-.control-tabs.primary > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary > div > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after {
-    background-position: 0 -31px;
-}
-
-.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after {
-    background-position: 0 0;
-}
-
-.builder-tabs.primary > .tabs > ul.tabs > li.active > div.tab-container::before {
-    background-position: left 0;
-}
-
-.builder-tabs.primary > .tabs > ul.tabs > li.active > div.tab-container::after {
-    background-position: 0 0;
+    direction: rtl;
 }
 
 .oc-icon-chevron-right:before, .icon-chevron-right:before {
@@ -183,27 +119,55 @@ input[dir=auto] {
     filter: FlipH;
     -ms-filter: "FlipH";
 }
-.builder-tabs.primary > .tabs > ul.tabs > li > div.tab-container::before{
-    background-position: right -27px;
+
+.ace-github, #BlogMarkdown-formContent-content-code, .ace-github textarea, #BlogMarkdown-formContent-content-code textarea {
+    direction: ltr;
 }
-.builder-tabs.primary > .tabs > ul.tabs > li > div.tab-container::after{
-    background-position: 0 -27px;
-}
-.ace-github,#BlogMarkdown-formContent-content-code,.ace-github textarea,#BlogMarkdown-formContent-content-code textarea{
-    direction: rtl;
-}
-.control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::before, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::before, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::before{
+
+.control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::before, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::before, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::before {
     transform: skewX(20deg);
 }
-.control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after{
+
+.control-tabs.primary-tabs > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > ul.nav-tabs > li a > span.title::after, .control-tabs.primary-tabs > div > div > ul.nav-tabs > li a > span.title::after {
     transform: skewX(-20deg);
 }
-.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::before, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::before{
+
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::before, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::before {
     transform: skewX(20deg);
 }
-.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after{
+
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after, .fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs > div > ul.nav-tabs > li a > span.title::after {
     transform: skewX(-20deg);
 }
-.beautifier-container , .beautifier-raw-content{
-    direction: rtl;
+
+.beautifier-container, .beautifier-raw-content {
+    direction: ltr;
+}
+
+div.control-popover.placement-left > div::after {
+    border-left: 8px solid #ffffff;
+    border-right: none;
+    right: -8px;
+    left: auto;
+}
+
+div.control-popover.placement-left > div::before {
+    border-left: 9px solid rgba(0, 0, 0, 0.15);
+    border-right: none;
+    right: -9px;
+    left: auto;
+}
+
+div.control-popover.placement-right > div::before {
+    border-right: 9px solid rgba(0, 0, 0, 0.15);
+    border-left: nonr;
+    left: -9px;
+    right: auto;
+}
+
+div.control-popover.placement-right > div::after {
+    border-right: 8px solid #ffffff;
+    border-left: none;
+    left: -8px;
+    right: auto;
 }

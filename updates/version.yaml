@@ -2,3 +2,4 @@
 1.0.2: Fix For Builder Plugin
 1.0.3: Fix markdown editor direction
 1.1.1: update to october cms build 346
+1.2.1: Remove Skin from plugin now plugin work with default skin

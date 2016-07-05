@@ -74,6 +74,6 @@ class CssFlipper
      */
     public static function getCustomPath($path)
     {
-        return base_path('plugins/rtlweb/rtler/skins/rtlskin/generated/') . $path;
+        return storage_path('/temp/public/rtlskin/generated/'). $path;
     }
 }

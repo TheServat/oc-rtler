@@ -5,6 +5,7 @@ use Config;
 use File;
 use Request;
 use Cms\Classes\Theme;
+use System\Classes\CombineAssets;
 use System\Classes\PluginBase;
 use System\Classes\MarkupManager;
 use System\Classes\PluginManager;
@@ -45,19 +46,38 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'rtlweb.rtler::lang.plugin.name',
+            'name' => 'rtlweb.rtler::lang.plugin.name',
             'description' => 'rtlweb.rtler::lang.plugin.description',
-            'author'      => 'Sajjad Servatjoo',
-            'icon'        => 'icon-leaf'
+            'author' => 'Sajjad Servatjoo & Saman Sorushniya',
+            'icon' => 'icon-leaf'
         ];
     }
+
+    public function boot()
+    {
+        \Event::listen('backend.page.beforeDisplay', function ($controller, $action, $params) {
+            $controller->addJs(\Config::get('cms.pluginsPath') . ('/rtlweb/rtler/assets/js/rtler-min.js'));
+            $controller->addCss(\Config::get('cms.pluginsPath') . ('/rtlweb/rtler/assets/css/custom.css'));
+        });
+    }
+
     public function register()
     {
-        Config::set('cms.backendSkin', 'RtlWeb\Rtler\Skins\RtlSkin');
-
+        $this->registerAssetBundles();
         $this->registerMarkupTags();
         $this->registerUrlGenerator();
     }
+
+    /**
+     * Register asset bundles
+     */
+    protected function registerAssetBundles()
+    {
+        CombineAssets::registerCallback(function ($combiner) {
+            $combiner->registerBundle( '$/rtlweb/rtler/assets/js/rtler.js');
+        });
+    }
+
     protected function registerUrlGenerator()
     {
         $this->app['url'] = $this->app->share(function ($app) {
@@ -116,13 +136,25 @@ class Plugin extends PluginBase
                 'description' => 'rtlweb.rtler::lang.plugin.description',
                 'category' => 'rtlweb.rtler::lang.plugin.name',
                 'icon' => 'icon-magic',
-                'class'       => 'RtlWeb\Rtler\Models\Settings',
+                'class' => 'RtlWeb\Rtler\Models\Settings',
                 'order' => 500,
+                'permissions' => ['rtlweb.rtler.manage'],
                 'keywords' => 'rtl rtler'
             ]
         ];
 
     }
+
+    public function registerPermissions()
+    {
+        return [
+            'rtlweb.rtler.manage' => [
+                'tab' => 'system::lang.permissions.name',
+                'label' => 'Manage Rtler'
+            ]
+        ];
+    }
+
     /**
      * Twig Markup tag 'flipCss'
      * @param $paths
@@ -143,7 +175,7 @@ class Plugin extends PluginBase
             if (File::exists(dirname($assetPath) . '/' . File::name($assetPath) . '.rtl.' . File::extension($assetPath))) {
                 $newPath = dirname($assetPath) . '.rtl.' . File::extension($assetPath);
             } else {
-                $newPath = CssFlipper::flipCss($assetPath,true);
+                $newPath = CssFlipper::flipCss($assetPath, true);
             }
             $rPaths[] = $newPath;
         }

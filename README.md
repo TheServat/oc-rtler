@@ -11,3 +11,5 @@ use ```flipCss``` filter in theme to flipping css in the frontend, for example:
 ```
 ```flipCss``` must be used before the ```theme``` filter.
 the ```flipCss``` filter works only if the key ```direction``` exists in the frontend language and equals to ```rtl```.
+
+by Sajjad Servatjoo & Saman Sorushniya
