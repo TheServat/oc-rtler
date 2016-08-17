@@ -21,7 +21,7 @@ class CssFlipper
      */
     public static function flipCss($path, $useTheme = false)
     {
-        if($path == '/modules/backend/formwidgets/richeditor/assets/css/richeditor.css'){
+        if(in_array($path,array('/modules/backend/formwidgets/richeditor/assets/css/richeditor.css',\Config::get('cms.pluginsPath') . ('/rtlweb/rtler/assets/css/custom.css')))){
             return $path;
         }
         $theme_name = Theme::getActiveTheme()->getDirName();
@@ -45,7 +45,7 @@ class CssFlipper
 //                    dd('url(\'/' . dirname($path) . '/' . $u . '\')');
                     $p = dirname($path) . '/' . $u;
                     if (substr($p, 0, 1) != '/') {
-                        $p = '/' . $p;
+                        $p = url().'/' . $p;
                     }
 
                     return 'url(\'' . $p . '\')';
