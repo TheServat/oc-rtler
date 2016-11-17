@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
     direction: rtl;
 }
 
@@ -189,4 +190,8 @@ div.control-popover.placement-right>div::after {
     border-left: none;
     left: -8px;
     right: auto;
+}
+
+.control-treeview ol>li>div>ul.submenu::after {
+    background-position: 0 top;
 }
