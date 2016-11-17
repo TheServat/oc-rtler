@@ -3,3 +3,7 @@
 1.0.3: Fix markdown editor direction
 1.1.1: update to october cms build 346
 1.2.1: Remove Skin from plugin now plugin work with default skin
+1.3.0: 
+    - Update and fix some errors
+    - remove settig page now it detect language auto,
+    - flipCss filter detect language auto with rainlab.translator

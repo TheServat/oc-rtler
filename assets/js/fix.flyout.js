@@ -1,5 +1,5 @@
 var Flyout = $.fn.flyout.Constructor
-Flyout.prototype.createOverlay = function() {
+Flyout.prototype.createOverlay = function () {
     this.$overlay = $('<div class="flyout-overlay"/>')
 
     var position = this.$el.offset()

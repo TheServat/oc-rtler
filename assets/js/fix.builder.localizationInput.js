@@ -1,4 +1,4 @@
-if($.oc.builder && $.oc.builder.localizationInput ) {
+if ($.oc.builder && $.oc.builder.localizationInput) {
     var LocalizationInput = $.oc.builder.localizationInput
     LocalizationInput.prototype.buildAddLink = function () {
         var $container = this.getContainer()

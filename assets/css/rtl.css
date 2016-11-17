@@ -1,0 +1,192 @@
+html,body {
+    direction: rtl;
+}
+
+.clockpicker-popover {
+    right: auto !important;
+}
+
+.clockpicker-popover .popover-title {
+    direction: ltr;
+}
+
+.select2-container--default {
+    direction: rtl;
+}
+
+.select2-container--open .select2-dropdown {
+    left: 0;
+    right: auto;
+    direction: rtl;
+}
+
+.field-codeeditor .editor-toolbar {
+    right: 17px;
+    left: auto !important;
+}
+
+body.display-side-panel #layout-side-panel {
+    z-index: 99999;
+}
+
+.sidenav-tree ul.top-level>li>div.group h3::before {
+    left: 13px;
+    right: auto;
+    content: '\f0d9';
+}
+
+.control-filelist ul li.group>h4 a::before,
+.control-filelist ul li.group>div.group>h4 a::before {
+    left: 20px;
+    right: auto;
+    content: '\f0d9';
+}
+
+.control-tabs::before {
+    content: "";
+}
+
+.control-tabs::after {
+    content: "" !important;
+}
+
+.fancy-layout .control-tabs.master-tabs>div>div.tabs-container>ul.nav-tabs>li a>span.title::before,
+.fancy-layout.control-tabs.master-tabs>div>div.tabs-container>ul.nav-tabs>li a>span.title::before,
+.fancy-layout .control-tabs.master-tabs>div>div.tabs-container>ul.nav-tabs>li a>span.title::after,
+.fancy-layout.control-tabs.master-tabs>div>div.tabs-container>ul.nav-tabs>li a>span.title::after {
+    transform: skewX(20deg);
+}
+
+.component-list .components div.layout div.layout-row div.layout-cell>div::before {
+    text-indent: 4px !important;
+}
+
+.draggable-component-item>div::after,
+.component-list .components div.layout-cell>div::after,
+div.control-componentlist div.components div.layout-cell>div::after {
+    text-indent: 3px !important;
+    transform: rotate(180deg) !important;
+}
+
+.control-assetlist ul li div.controls {
+    left: 45px;
+    right: auto;
+}
+
+.control-assetlist ul li .checkbox {
+    left: 17px;
+    right: auto;
+}
+
+.control-assetlist p.parent a.link,
+.control-assetlist ul li a.link {
+    padding: 10px 20px 10px 50px;
+}
+
+div.control-popover.placement-bottom .popover-head::before {
+    left: 15px;
+    right: auto;
+}
+
+div.control-popover {
+    right: auto !important;
+}
+
+div.control-popover.placement-right .popover-head::before {
+    left: -8px !important;
+    right: auto;
+    border-right: 8px solid #d35400;
+    border-left: none;
+}
+
+div.control-popover.placement-left .popover-head::before {
+    right: -8px !important;
+    left: auto;
+    border-left: 8px solid #d35400;
+    border-right: none;
+}
+
+input[dir=auto] {
+    direction: rtl;
+}
+
+.oc-icon-chevron-right:before,
+.icon-chevron-right:before {
+    content: "\f053"
+}
+
+.oc-icon-chevron-left:before,
+.icon-chevron-left:before {
+    content: "\f054"
+}
+
+.builder-tabs.primary>.tabs>ul.tabs>li.new-tab {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.ace-github,
+#BlogMarkdown-formContent-content-code,
+.ace-github textarea,
+#BlogMarkdown-formContent-content-code textarea {
+    direction: ltr;
+}
+
+.control-tabs.primary-tabs>ul.nav-tabs>li a>span.title::before,
+.control-tabs.primary-tabs>div>ul.nav-tabs>li a>span.title::before,
+.control-tabs.primary-tabs>div>div>ul.nav-tabs>li a>span.title::before {
+    transform: skewX(20deg);
+}
+
+.control-tabs.primary-tabs>ul.nav-tabs>li a>span.title::after,
+.control-tabs.primary-tabs>div>ul.nav-tabs>li a>span.title::after,
+.control-tabs.primary-tabs>div>div>ul.nav-tabs>li a>span.title::after {
+    transform: skewX(-20deg);
+}
+
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs>div>ul.nav-tabs>li a>span.title::before,
+.fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs>div>ul.nav-tabs>li a>span.title::before {
+    transform: skewX(20deg);
+}
+
+.fancy-layout .control-tabs.secondary-tabs.secondary-content-tabs>div>ul.nav-tabs>li a>span.title::after,
+.fancy-layout.control-tabs.secondary-tabs.secondary-content-tabs>div>ul.nav-tabs>li a>span.title::after {
+    transform: skewX(-20deg);
+}
+
+.beautifier-container,
+.beautifier-raw-content {
+    direction: ltr;
+}
+
+div.control-popover.placement-left>div::after {
+    border-left: 8px solid #ffffff;
+    border-right: none;
+    right: -8px;
+    left: auto;
+}
+
+div.control-popover.placement-left>div::before {
+    border-left: 9px solid rgba(0, 0, 0, 0.15);
+    border-right: none;
+    right: -9px;
+    left: auto;
+}
+
+div.control-popover.placement-right>div::before {
+    border-right: 9px solid rgba(0, 0, 0, 0.15);
+    border-left: nonr;
+    left: -9px;
+    right: auto;
+}
+
+div.control-popover.placement-right>div::after {
+    border-right: 8px solid #ffffff;
+    border-left: none;
+    left: -8px;
+    right: auto;
+}

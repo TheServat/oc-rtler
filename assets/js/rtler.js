@@ -10,8 +10,5 @@
 
 =require fix.builder.localizationInput.js
 =require fix.flyout.js
-=require fix.scrollpad.js
-=require fix.sortable.js
-=require fix.sidepaneltab.custom.js
-=require fix.verticalmenu.custom.js
+= require fix.scrollpad.js
 */

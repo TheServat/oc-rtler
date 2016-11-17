@@ -1,12 +1,5 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Sajjad
- * Date: 6/20/2015
- * Time: 3:04 PM
- */
+<?php namespace RtlWeb\Rtler\Classes;
 
-namespace RtlWeb\Rtler\Classes;
 
 
 use File;
@@ -42,7 +35,7 @@ class CssFlipper
                 $flipped_css = preg_replace_callback('/url\s*\(\s*[\'|\"]?([A-Za-z0-9\.\/\-\?=#_&]+)[\'|\"]?\)/i', function ($url) use ($path) {
                     $u = str_replace('\'', '', $url[1]);
                     $u = str_replace('"', '', $u);
-//                    dd('url(\'/' . dirname($path) . '/' . $u . '\')');
+
                     $p = dirname($path) . '/' . $u;
                     if (substr($p, 0, 1) != '/') {
                         $p = '/' . $p;
@@ -74,6 +67,6 @@ class CssFlipper
      */
     public static function getCustomPath($path)
     {
-        return storage_path('/temp/public/rtlskin/generated/'). $path;
+        return storage_path('/temp/public/rtler/generated/'). $path;
     }
 }

@@ -1,5 +1,0 @@
-fields:
-  languages:
-    label: rtlweb.rtler::lang.languages
-    comment: rtlweb.rtler::lang.description
-    type: checkboxlist

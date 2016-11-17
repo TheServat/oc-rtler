@@ -1,5 +1,5 @@
 var Scrollpad = $.fn.scrollpad.Constructor
-Scrollpad.prototype.setScrollContentSize = function() {
+Scrollpad.prototype.setScrollContentSize = function () {
     var scrollbarSize = this.getScrollbarSize()
 
     if (this.options.direction == 'vertical')
